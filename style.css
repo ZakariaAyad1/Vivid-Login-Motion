@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url(images/back1.jpeg); */
+    background-color: rgb(0, 49, 0);
+    background-size: cover;
+}
+.parent{
+    position: absolute;
+    background-color: transparent;
+    padding: 20px;
+    min-width: 400px;
+    min-height: 300px;
+    border-radius: 25px;
+
+}
+.parent h2{
+    text-align: center;
+    color: rgb(0, 255, 30);
+}
+.parent form{
+    margin: 15px 0;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 3px 15px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    outline: none;
+    transition: 0.3s linear;
+}
+.input-box input:focus,
+.input-box input:valid{
+    border: 3px solid greenyellow;
+    
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    color: yellowgreen;
+    transition: 0.3s ease;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 10px;
+    background-color: rgb(0, 49, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 1px;
+    font-size: 0.9rem;
+    color: greenyellow;
+}
+
+.forgot{
+    margin: 10px 0;
+}
+.forgot a{
+    text-decoration: none;
+    color: white;
+}
+.forgot a:hover{
+    text-decoration: underline;
+}
+.btn-login{
+    width: 60%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: rgb(0, 255, 30);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn-login:hover{
+    width: 100%;
+    background-color: yellow;
+}
+.signup{
+    margin: 10px 0;
+}
+.signup a{
+    text-decoration: none;
+    color: rgb(0, 255, 30);
+    font-weight: 800;
+    transition: 0.5s ease;
+}
+.signup a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+.container{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container span{
+    position: absolute;
+    left: -170px;
+    
+    width: 70px;
+    height: 13px;
+    background: green;
+    border-radius: 10px;
+    transform: rotate(calc(var(--i) * (360deg / 50)));
+    transform-origin: 300px;
+
+    animation: color_circle 3s ease infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes color_circle {
+    0% {
+        background-color: rgb(204, 249, 6);
+
+    }
+
+    25% {
+        background-color: rgb(255, 234, 47);
+    }
+}
+
+
+/*
+.parent{
+    position: relative;
+    background-color: red;
+    padding: 10px;
+    
+}
+.parent form{
+    width
+}
+.parent h2{
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin: 10px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+*/
